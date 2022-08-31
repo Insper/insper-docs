@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage[a4paper, margin=0.5in, top=1in]{geometry}
+%\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage[export]{adjustbox}
+\usepackage{tikz}
+\usepackage{rotating}
+\usepackage{fancyhdr}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{hyperref}
+\usepackage{anyfontsize}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=cyan,
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+
+
+
+\definecolor{linhaazul}{HTML}{4f81bd}
+
+\AddToShipoutPictureBG{%
+  \AtPageUpperLeft{%
+    \hspace{90mm}\raisebox{-\height}{\includegraphics[width=120mm]{imgs/image26.png}}
+  }
+}
+
+\setcounter{secnumdepth}{0}
+\title{General Use Manual}
+
+\author{Luciano Soares / Emil Freme}
+\date{August 2022}
+
+%  \setlength{\footskip}{55.34235pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\begin{document}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
+% \fancyfoot[R]{}
+\fancyfoot[R]{\begin{textblock*}{0mm}(200mm,275mm) % {block width} (coords) 
+   \begin{sideways}\hspace*{100pt}Page \Large{\thepage}\end{sideways}
+\end{textblock*}}
+\fancyheadoffset[rf]{10mm}
+
+\begin{titlepage}
+\makeatletter
+\begin{tabular}{!{\color{linhaazul}\vrule} l }
+    \\
+    \\
+    {\fontsize{44}{55}\selectfont \@title}\\
+    \\
+    \Huge{Virtual Reality and Digital Games Lab}\\
+    \\
+
+\end{tabular}
+\makeatother
+
+\vfill
+\makeatletter
+\@author
+
+\@date
+\makeatother
+\end{titlepage}
+
+
+\tableofcontents
+\newpage
+\include{contents}
+\end{document}
